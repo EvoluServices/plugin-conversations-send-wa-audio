@@ -32,9 +32,6 @@ export default class ConversationsSendWaAudioPlugin extends FlexPlugin {
 
     flex.MessageInputActions.Content.add(
       <RecorderControls key={'recorder-controls'} />,
-      {
-        if: () => isFirefox
-      }
     )
 
     flex.MessageBubble.Content.remove('body', {

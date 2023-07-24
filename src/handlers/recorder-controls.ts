@@ -17,13 +17,3 @@ export const startRecording = async (setRecorderState: SetRecorder) => {
     console.log(err)
   }
 }
-
-interface SaveRecording {
-  recorder: MediaRecorder | null
-}
-
-export const saveRecording = ({ recorder }: SaveRecording) => {
-  if (recorder && recorder.state !== 'inactive') {
-    recorder.stop()
-  }
-}

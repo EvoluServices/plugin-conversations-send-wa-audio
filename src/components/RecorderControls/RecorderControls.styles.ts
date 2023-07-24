@@ -1,4 +1,4 @@
-import { styled } from '@twilio/flex-ui'
+import { styled } from '@twilio/flex-ui';
 
 export const ControlsContainer = styled('div')`
   display: flex;
@@ -19,6 +19,24 @@ export const RecorderDisplay = styled('div')`
     100% {
       opacity: 1;
     }
+  }
+`
+
+export const ErrorContainer = styled('div')`
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  margin: 0 20%;
+  background-color: rgb(214, 31, 31);
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  svg {
+    height: 1rem;
+    padding: 0px 10px;
+    margin-top: 0.1rem;
+    color: white;
   }
 `
 
@@ -53,6 +71,10 @@ export const StartButtonContainer = styled('div')`
   margin: 0 10px;
 `
 
+type StartButtonProps = {
+  type: 'start' | 'send';
+}
+
 export const StartButton = styled('button')`
   border: none;
   border-radius: 50%;
@@ -63,8 +85,14 @@ export const StartButton = styled('button')`
   height: 30px;
 
   &:hover {
-    color: #41295a;
-    background-color: #f2ea02;
+    color: #fff;
+    background-color: rgb(214, 31, 31);
+  }
+  &.send {
+    &:hover {
+      color: #fff;
+      background-color: #00a884;
+    }
   }
 `
 
@@ -83,6 +111,28 @@ export const CancelButton = styled('button')`
   margin: 0 5px;
 
   &:hover {
-    color: #fd1c03;
+    color: #fff;
+    background-color: rgb(214, 31, 31);
+  }
+`
+
+export const LoadingButton = styled('button')`
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  color: rgb(2, 99, 224);
+  svg {
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 `
