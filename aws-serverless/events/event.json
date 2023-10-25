@@ -1,0 +1,38 @@
+{
+    "Records": [
+        {
+            "eventVersion": "2.1",
+            "eventSource": "aws:s3",
+            "awsRegion": "sa-east-1",
+            "eventTime": "2023-09-06T17:40:48.894Z",
+            "eventName": "ObjectCreated:Put",
+            "userIdentity": {
+                "principalId": "AWS:AIDA3AV5GN7J7MRZOHDW3"
+            },
+            "requestParameters": {
+                "sourceIPAddress": "191.188.131.127"
+            },
+            "responseElements": {
+                "x-amz-request-id": "NDJHAH1MVXQ5XE16",
+                "x-amz-id-2": "51XYT3MIDYDQedCWLLprsOeleRlqkW2rye9rhKhtgGo38Vgof4FcmbKQTlpiCvpktN5ijS57jwNVNSOcCQ7j/6GsIktTUZEG"
+            },
+            "s3": {
+                "s3SchemaVersion": "1.0",
+                "configurationId": "be5d05f6-2264-4e9a-9622-794ccb58c38d",
+                "bucket": {
+                    "name": "evo-twilio-team-send-wa-audio",
+                    "ownerIdentity": {
+                        "principalId": "A20CLTYX66PGVO"
+                    },
+                    "arn": "arn:aws:s3:::evo-twilio-team-send-wa-audio"
+                },
+                "object": {
+                    "key": "uploads/6183d52a-a42e-4b95-ac78-56456ba3ddb0__audio.wav",
+                    "size": 69053,
+                    "eTag": "429d5eea12a58f8e4531f12de82202b0",
+                    "sequencer": "0064F8B9A0C85FE5E1"
+                }
+            }
+        }
+    ]
+}
